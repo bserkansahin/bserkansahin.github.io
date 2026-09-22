@@ -36,7 +36,7 @@ bserkansahin.github.io/
 │   ├── index.html                   → proje listesi
 │   └── hawk-scan/index.html         → Hawk Scan vaka çalışması
 ├── indir/                           → yalnızca yerel; .gitignore ile depo dışında
-│   └── HawkScanSetup-1.3.0.exe      → henüz yayımlanmadı (45,2 MB)
+│   └── HawkScanSetup-1.3.0.exe      → GitHub Release ile yayımlanır (45,2 MB)
 └── assets/
     ├── css/main.css                 → tek stil dosyası
     ├── js/main.js                   → tek betik
@@ -204,10 +204,20 @@ Depo özel kalacak; sitede "Kaynak Kod" düğmesi bulunmuyor.
 
 ## 9. Kurulum paketinin yayımlanması
 
-**Kurulum paketi henüz yayımlanmamıştır.** Dosya yalnızca yerelde
+Kurulum paketi **GitHub Release eklentisi** olarak yayımlanır; EXE dosyası
+deponun git geçmişine hiçbir zaman girmez. Yerel kopya
 `indir/HawkScanSetup-1.3.0.exe` yolunda durur ve `.gitignore` ile depo dışında
-tutulur. Hawk Scan sayfasında indirme bölümü ve indirme düğmesi yoktur;
-"Projenin Bugünkü Durumu" bölümünde paketin sonra paylaşılacağı yazılıdır.
+tutulur.
+
+| Alan | Adres |
+|---|---|
+| Release | `https://github.com/bserkansahin/bserkansahin.github.io/releases/tag/v1.3.0` |
+| Doğrudan dosya | `https://github.com/bserkansahin/bserkansahin.github.io/releases/download/v1.3.0/HawkScanSetup-1.3.0.exe` |
+
+Hawk Scan sayfasındaki iki indirme düğmesi (hero ve `#indir` bölümü) doğrudan
+bu dosya adresine bağlıdır. Bağlantıda `download` özniteliği ve
+`target="_blank"` **kullanılmaz**; GitHub dosyayı zaten indirme olarak sunar ve
+indirme aynı sekmede başlar.
 
 ### Sürüm bilgisi
 
@@ -232,16 +242,18 @@ olarak yüklenir, git geçmişine girmez ve sitedeki düğme o adrese bağlanır
 Releases için herkese açık bir depo gerekir; Hawk Scan kaynak deposu özel
 kalacağından bu amaçla ayrı ve boş bir genel depo kullanılabilir.
 
-**Paket yayımlanmaya karar verilirse yapılacaklar:**
+**Sürüm yükseltirken yapılacaklar:**
 
-1. Paketi GitHub Releases'e sürüm etiketiyle eklenti olarak yükleyin; depoya
+1. Yeni paketi `v<sürüm>` etiketiyle GitHub Release olarak yükleyin; depoya
    kopyalamayın ve `.gitignore` içindeki `indir/` kuralını kaldırmayın.
 2. Yeni SHA-256 değerini hesaplayın:
    `Get-FileHash .\indir\HawkScanSetup-<sürüm>.exe -Algorithm SHA256`
-3. `projects/hawk-scan/index.html` içine indirme bölümünü geri ekleyin; sürüm,
-   yapı tarihi, boyut, SHA-256 ve bağlantı release adresini göstermelidir.
-4. Aynı sayfadaki "SÜRÜM" künyesini (`.figures` bloğu) güncelleyin.
-5. "Projenin Bugünkü Durumu" bölümündeki "Kurulum paketi" notunu kaldırın.
+3. `projects/hawk-scan/index.html` içindeki iki indirme bağlantısını yeni
+   release adresine; `#indir` bölümündeki dosya adı, sürüm, boyut ve SHA-256
+   değerlerini yeni pakete göre güncelleyin.
+4. Aynı sayfadaki "SÜRÜM" künyesini (`.figures` bloğu) ve hero'daki sürüm
+   satırını güncelleyin.
+5. Eski release'i silmeniz gerekmez; önceki sürümler arşiv olarak kalabilir.
 
 ---
 
@@ -336,7 +348,8 @@ Get-ChildItem -Recurse -Include *.html,*.css,*.js,*.md,*.txt,*.xml |
 2. Tarayıcı geliştirici araçlarında masaüstü, tablet (768 px) ve mobil (375 px)
    genişliklerini kontrol edin; yatay kaydırma olmamalı.
 3. Tüm bağlantıları tıklayın; kırık bağlantı ve eksik görsel olmamalı.
-4. Sayfalarda indirme bağlantısı veya `/indir/` referansı kalmadığını
+4. İndirme düğmesine basıldığında EXE dosyasının başka bir sayfaya gitmeden
+   doğrudan indiğini ve SHA-256 değerinin sayfadaki değerle eşleştiğini
    doğrulayın.
 5. Klavyeyle gezinin: `Tab` ile "İçeriğe geç" bağlantısı ilk sırada görünmeli,
    odak halkaları her öğede seçilebilir olmalı, mobil menü `Esc` ile kapanmalı.

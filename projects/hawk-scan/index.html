@@ -85,6 +85,14 @@
             <p class="label">WINDOWS SİSTEM TEŞHİS VE BAKIM UYGULAMASI</p>
           </div>
         </div>
+
+        <!-- Doğrudan GitHub Release eklentisine bağlıdır. Bilinçli olarak
+             download özniteliği ve target="_blank" yoktur; GitHub dosyayı
+             zaten indirme olarak sunar ve indirme aynı sekmede başlar. -->
+        <div class="project-hero__cta">
+          <a class="btn btn--primary" href="https://github.com/bserkansahin/bserkansahin.github.io/releases/download/v1.3.0/HawkScanSetup-1.3.0.exe">Kurulum dosyasını indir</a>
+          <p class="label">SÜRÜM 1.3.0 &nbsp;·&nbsp; WINDOWS 10/11 x64 &nbsp;·&nbsp; 45,2 MB</p>
+        </div>
       </div>
 
       <p class="lead">
@@ -596,18 +604,76 @@
         </ul>
       </div>
 
-      <p class="note" style="margin-top:1.8rem">
-        <strong>Kurulum paketi:</strong> Saha doğrulamaları ve yayın kontrolleri
-        tamamlandıktan sonra paylaşılacaktır.
-      </p>
-
-      <p class="note note--quiet" style="margin-top:1.4rem">
+      <p class="note note--quiet" style="margin-top:1.8rem">
         <strong>Bilmeniz gerekenler:</strong> Bellek sağlığı ve işlemci
         sıcaklığı bilinçli olarak ölçülmez; bu iki başlık her makinede
         "ölçülemedi" döner. Tarama profili seçimi yalnızca komut satırında
         bulunur. Uzun süren bakım işlemleri (DISM onarımı, sfc) makineye göre
         uzun sürebilir ve çalışırken durdurulmamalıdır.
       </p>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       İNDİRME
+       ================================================================= -->
+  <section class="section" id="indir">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Kurulum Paketi</h2>
+        <p class="lead">
+          Kişisel bir projedir; ticari bir ürün veya sertifikalı bir yazılım
+          değildir. Paket, deponun GitHub sürüm sayfasından sunulur.
+        </p>
+      </header>
+
+      <div class="download">
+        <div class="download__top">
+          <div>
+            <p class="label label--accent" style="margin:0">HAWK SCAN 1.3.0</p>
+            <h3>HawkScanSetup-1.3.0.exe</h3>
+          </div>
+          <a class="btn btn--primary" href="https://github.com/bserkansahin/bserkansahin.github.io/releases/download/v1.3.0/HawkScanSetup-1.3.0.exe">
+            Kurulum dosyasını indir &nbsp;(45,2 MB)
+          </a>
+        </div>
+
+        <dl>
+          <div>
+            <dt class="label">DOSYA ADI</dt>
+            <dd>HawkScanSetup-1.3.0.exe</dd>
+          </div>
+          <div>
+            <dt class="label">SÜRÜM</dt>
+            <dd>1.3.0</dd>
+          </div>
+          <div>
+            <dt class="label">BOYUT</dt>
+            <dd>47.345.331 bayt (45,2 MB)</dd>
+          </div>
+          <div>
+            <dt class="label">SHA-256</dt>
+            <dd class="hash">06417dda7c4198093a09036a2a1bd35e406092926c9507a29c96ac54924c4eb0</dd>
+          </div>
+          <div>
+            <dt class="label">GEREKSİNİM</dt>
+            <dd>64 bit Windows 10 veya Windows 11 · Kurulum yönetici yetkisi ister.</dd>
+          </div>
+        </dl>
+
+        <p class="note" style="margin-top:1.4rem">
+          <strong>SmartScreen uyarısı:</strong> Paket kod imzalama sertifikası
+          taşımıyor. Dosyayı çalıştırdığınızda Windows SmartScreen "Bilinmeyen
+          yayımcı" uyarısı gösterebilir. Bu uyarı dosyanın zararlı olduğu
+          anlamına gelmez; yayıncının imzayla doğrulanamadığını belirtir.
+          İndirdiğiniz dosyayı yukarıdaki SHA-256 değeriyle
+          karşılaştırabilirsiniz:
+        </p>
+        <p class="cmd">
+          Get-FileHash .\HawkScanSetup-1.3.0.exe -Algorithm SHA256
+        </p>
+      </div>
     </div>
   </section>
 
