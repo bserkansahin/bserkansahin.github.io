@@ -1,0 +1,36 @@
+# İşletim sistemi
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Düzenleyici
+.vscode/
+.idea/
+*.swp
+
+# Yerel sunucu ve geçici çıktılar
+.cache/
+*.log
+*.tmp
+
+# Gizli veri — bu klasöre hiç girmemeli, ağ olarak burada da engelleniyor
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+credentials*
+secrets*
+
+# Hawk Scan rapor çıktıları ve gerçek sistem verisi asla siteye kopyalanmaz
+*-rapor.html
+*-rapor.json
+
+# Hawk Scan kurulum paketi — portföy deposuna alınmaz.
+# Dosya yerelde durur; yayımlama kararı GitHub Releases üzerinden verilecek.
+indir/
+
+# Geliştirme notları — yayımlanmaz.
+# Başka bir projenin yerel klasör yolunu ve CV'deki kişisel veri ayrıntılarını içerir.
+CONTENT-TODO.md

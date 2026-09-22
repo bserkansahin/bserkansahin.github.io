@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Hawk Scan | Windows Sistem Teşhis ve Bakım Uygulaması</title>
+<meta name="description" content="Windows bilgisayarlar için yerel çalışan, WPF/.NET tabanlı arıza teşhis ve kontrollü bakım uygulaması. 12 tarama modülü, 7 onaylı bakım işlemi, HTML ve JSON raporlama.">
+<link rel="canonical" href="https://bserkansahin.github.io/projects/hawk-scan/">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Bilal Serkan Şahin">
+<meta property="og:url" content="https://bserkansahin.github.io/projects/hawk-scan/">
+<meta property="og:title" content="Hawk Scan | Windows Sistem Teşhis ve Bakım Uygulaması">
+<meta property="og:description" content="Windows bilgisayarlar için yerel çalışan, WPF/.NET tabanlı arıza teşhis ve kontrollü bakım uygulaması. 12 tarama modülü, 7 onaylı bakım işlemi, HTML ve JSON raporlama.">
+<meta property="og:image" content="https://bserkansahin.github.io/assets/images/og-hawk-scan.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hawk Scan — Hawk Center ürün ailesi">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hawk Scan | Windows Sistem Teşhis ve Bakım Uygulaması">
+<meta name="twitter:description" content="Windows bilgisayarlar için yerel çalışan, WPF/.NET tabanlı arıza teşhis ve kontrollü bakım uygulaması.">
+<meta name="twitter:image" content="https://bserkansahin.github.io/assets/images/og-hawk-scan.png">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#F6F1E8">
+
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+<a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/"><span class="brand__rule" aria-hidden="true"></span>Bilal Serkan Şahin</a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="ana-gezinme">
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      MENÜ
+    </button>
+
+    <nav class="nav" id="ana-gezinme" aria-label="Ana gezinme">
+      <a href="/">Ana Sayfa</a>
+      <a href="/#hakkimda">Hakkımda</a>
+      <a href="/#deneyim">Deneyim</a>
+      <a href="/#yetkinlikler">Yetkinlikler</a>
+      <a href="/projects/" aria-current="page">Projeler</a>
+      <a href="/#iletisim">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="breadcrumb wrap label" aria-label="Site yolu">
+  <ol>
+    <li><a href="/">ANA SAYFA</a></li>
+    <li><a href="/projects/">PROJELER</a></li>
+    <li>HAWK SCAN</li>
+  </ol>
+</nav>
+
+<main id="icerik">
+
+  <!-- =================================================================
+       PROJE BAŞLIĞI
+       ================================================================= -->
+  <section class="project-hero">
+    <div class="wrap">
+      <div class="project-hero__head">
+        <div class="project-hero__ident">
+          <div class="project-hero__logo">
+            <img src="/assets/images/hawk-scan-logo.jpg" width="84" height="84"
+                 alt="Hawk Scan logosu: kalkan biçimli, şahin başı ve devre hatları taşıyan amblem"
+                 decoding="async">
+          </div>
+          <div>
+            <p class="label label--accent">HAWK CENTER ÜRÜN AİLESİ</p>
+            <h1>Hawk Scan</h1>
+            <p class="label">WINDOWS SİSTEM TEŞHİS VE BAKIM UYGULAMASI</p>
+          </div>
+        </div>
+
+        <!-- İndirme düğmesi başlığın yanında. Dosyanın SHA-256 değeri ve
+             sistem gereksinimleri sayfa sonundaki "Kurulum paketi"
+             bölümündedir; buradaki bağlantı oraya gider. -->
+        <div class="project-hero__cta">
+          <a class="btn btn--primary" href="/indir/HawkScanSetup-1.3.0.exe" download>Kurulum dosyasını indir</a>
+          <p class="label">SÜRÜM 1.3.0 &nbsp;·&nbsp; 45,2 MB &nbsp;·&nbsp; <a href="#indir">AYRINTILAR</a></p>
+        </div>
+      </div>
+
+      <p class="lead">
+        Hawk Scan, Windows bilgisayarlarda arıza teşhisi ve periyodik bakım için
+        geliştirdiğim masaüstü uygulamasıdır. Yerel çalışır, yönetici yetkisiyle
+        makineyi tarar, bulguları gösterir, kullanıcının tek tek onayladığı bakım
+        işlemlerini yürütür ve HTML ile JSON rapor üretir. Hedef kullanıcısı IT
+        uzmanı, uzman yardımcısı ve stajyerdir; kullanım anı arıza kaydı öncesi
+        teşhis ve periyodik bakımdır.
+      </p>
+
+      <dl class="figures">
+        <div>
+          <dt class="label">TARAMA MODÜLÜ</dt>
+          <dd>12</dd>
+        </div>
+        <div>
+          <dt class="label">BAKIM İŞLEMİ</dt>
+          <dd>7</dd>
+        </div>
+        <div>
+          <dt class="label">OTOMATİK TEST</dt>
+          <dd>600</dd>
+        </div>
+        <div>
+          <dt class="label">SÜRÜM</dt>
+          <dd>1.3.0</dd>
+        </div>
+      </dl>
+
+      <p class="note" style="margin-top:1.8rem">
+        <strong>Ne değildir:</strong> Hawk Scan bir antivirüs, EDR, zararlı
+        yazılım tarayıcısı ya da saldırı tespit aracı değildir. İmza veritabanı,
+        karma karşılaştırması veya davranış analizi içermez. "Güvenlik" buradaki
+        anlamıyla makinenin güvenlik <em>yapılandırmasını</em> raporlamaktır.
+      </p>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       TARAMA MODÜLLERİ
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>12 Tarama Modülü</h2>
+          <p class="lead">
+            Modüller birbirinden bağımsız ve eşzamanlı çalışır. Her modül kendi
+            içinde korunur: toplayıcı ya da kural hata verirse yalnızca o modül
+            ölçülemedi döner, tarama devam eder.
+          </p>
+      </header>
+
+      <ol class="modules">
+        <li>
+          <span class="label">01</span>
+          <div>
+            <h3>Disk</h3>
+            <p>Fiziksel disk sağlığı, aşınma ve sıcaklık sayaçları, mantıksal sürücü doluluğu ve alan dağılımı.</p>
+          </div>
+        </li>
+        <li>
+          <span class="label">02</span>
+          <div>
+            <h3>Bellek</h3>
+            <p>Kapasite, kullanım ve takılı modüller. Çalışan sistemde güvenilir bellek testi yapılamadığı için modül yeniden başlatmalı test önerir.</p>
+          </div>
+        </li>
+        <li>
+          <span class="label">03</span>
+          <div>
+            <h3>İşlemci</h3>
+            <p>Model, çekirdek ve iş parçacığı sayısı, anlık yük. Sıcaklık bilinçli olarak ölçülmez; güvenilir okuma sürücü seviyesi erişim ister.</p>
+          </div>
+        </li>
+        <li>
+          <span class="label">04</span>
+          <div>
+            <h3>Batarya</h3>
+            <p>Windows pil raporundan tasarım kapasitesi, tam şarj kapasitesi ve buradan hesaplanan sağlık oranı.</p>
+          </div>
+        </li>
+        <li>
+          <span class="label">05</span>
+          <div>
+            <h3>Ağ</h3>
+            <p>Adaptör yapılandırması, ağ geçidine erişim ve ad çözümleme. Kurumsal ağlarda ICMP rutin olarak engellendiği için ping sonucu sağlık kararına girmez.</p>
+          </div>
+        </li>
+        <li>
+          <span class="label">06</span>
+          <div>
+            <h3>Sistem Kararlılığı</h3>
+            <p>Olay günlüğünden son 30 günün beklenmedik kapanma, sistem çökmesi ve donanım hata kayıtları.</p>
+          </div>
+        </li>
+        <li>
+          <span class="label">07</span>
+          <div>
+            <h3>Cihaz Hataları</h3>
+            <p>Aygıt Yöneticisi'nde hata kodu bildiren cihazların tespiti ve hata kodunun anlamıyla birlikte listelenmesi.</p>
+          </div>
+        </li>
+        <li>
+          <span class="label">08</span>
+          <div>
+            <h3>Sürücüler</h3>
+            <p>Yüklü sürücü envanteri, sürücü deposu içeriği ve Windows Update üzerinden bekleyen sürücü güncellemeleri.</p>
+          </div>
+        </li>
+        <li>
+          <span class="label">09</span>
+          <div>
+            <h3>Başlangıç Programları</h3>
+            <p>Kayıt defteri ve başlangıç klasörlerindeki girdiler; imza durumu, çalıştığı konum ve etkin / devre dışı bilgisi.</p>
+          </div>
+        </li>
+        <li>
+          <span class="label">10</span>
+          <div>
+            <h3>Güvenlik Durumu</h3>
+            <p>TPM ve BitLocker durumu, Güvenlik Merkezi'ne kayıtlı ürünler ve ilgili Windows hizmetleri. Zararlı yazılım taraması yapılmaz.</p>
+          </div>
+        </li>
+        <li>
+          <span class="label">11</span>
+          <div>
+            <h3>Sistem Bilgisi</h3>
+            <p>İşletim sistemi sürümü ve yapısı, lisans durumu, çalışma süresi ve makine kimliği.</p>
+          </div>
+        </li>
+        <li>
+          <span class="label">12</span>
+          <div>
+            <h3>Windows Update</h3>
+            <p>Yeniden başlatma bekleme bayrağı, güncelleme hizmetinin durumu ve bekleyen güncellemeler.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="rows" style="margin-top:2.6rem">
+        <div class="row grid2">
+          <p class="label row__label">TARAMA<br>PROFİLLERİ</p>
+          <p class="row__body muted" style="margin:0">
+            <strong>Tam</strong> ve <strong>Hızlı</strong> olmak üzere iki profil
+            var. Profil, modül listesini kısaltmaz — iki profilde de 12 modülün
+            hepsi çalışır; hızlı profilde yalnızca bakım verisi toplama adımları
+            atlanır. Gerekçe ölçüme dayanıyor: modüller paralel çalıştığı için
+            tarama süresi modüllerin toplamı değil, en yavaşıdır.
+          </p>
+        </div>
+
+        <div class="row grid2">
+          <p class="label row__label">KOMUT SATIRI</p>
+          <p class="row__body muted" style="margin:0">
+            Uygulama arayüzsüz de çalışır: <code>--tara</code>,
+            <code>--cikti</code>, <code>--yol</code>, <code>--profil</code>,
+            <code>--sessiz</code> seçenekleriyle tarama yapar ve raporu diske
+            yazar. Çıkış kodları artan kötülük sırasındadır, işletim hataları
+            ayrı bir aralıktan başlar — böylece "arızalı bulundu" ile "çıktı
+            yazılamadı" betikte karışmaz. Bakım işlemleri komut satırından
+            çalıştırılamaz; onay bir insanın işaret kutusunu işaretlemesidir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       BAKIM
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Üç Aşamalı Güvenli Bakım</h2>
+          <p class="lead">
+            Yedi bakım işleminin tamamı aynı üç aşamadan geçer. İstisnası yoktur.
+          </p>
+      </header>
+
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>Önizleme</h3>
+            <p>
+              Hiçbir şey silinmeden kazanılacak alan hesaplanır ve kullanıcıya
+              gösterilir. Kullanıcı ne olacağını işlemden önce görür.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Kullanıcı Onayı</h3>
+            <p>
+              Varsayılan olarak hiçbir kutu işaretli gelmez. Kullanıcı işaret
+              kutusunu kendisi işaretlemeden hiçbir işlem çalışmaz.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>İşlem Günlüğü</h3>
+            <p>
+              Yürütülen her işlem zaman damgası, hedef yol ve sonucuyla birlikte
+              günlük dosyasına yazılır.
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="rows" style="margin-top:2.6rem">
+        <div class="row grid2">
+          <p class="label row__label">KAPSAMDAKİ<br>YEDİ İŞLEM</p>
+          <div class="row__body">
+            <p class="muted" style="margin:0 0 .8rem">
+              Geçici dosyalar<span class="sep">·</span>Geri dönüşüm kutusu<span class="sep">·</span>DNS
+              önbelleği<span class="sep">·</span>Windows Update indirme önbelleği<span class="sep">·</span>Bileşen
+              deposu temizliği (DISM)<span class="sep">·</span>Bileşen deposu onarımı (DISM
+              RestoreHealth)<span class="sep">·</span>Sistem dosyası denetimi ve onarımı (sfc)
+            </p>
+            <p class="muted" style="margin:0;font-size:.9rem">
+              Geçici dosya temizliğinde kullanımdaki dosyalar atlanır. Windows
+              Update önbelleği temizlenirken ilgili hizmet durdurulur ve işlem
+              sonunda — hata alınsa bile — yeniden başlatılır. Tarayıcı önbelleği
+              bu sürümde yalnızca raporlanır, silinmez.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       MİMARİ
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Tek Yönlü Katman Akışı</h2>
+          <p class="lead">
+            Bağımlılık yönü tek yönlüdür ve ters çevrilmez. Arayüz katmanında WMI
+            sorgusu, süreç çalıştırma veya dosya silme yer almaz; arayüz yalnızca
+            çekirdeği çağırır ve sonucu gösterir.
+          </p>
+      </header>
+
+      <ol class="pipeline" aria-label="Katman akışı: Collectors, Models, Rules, Scanning, Reporting, App">
+        <li>Collectors<span class="arrow" aria-hidden="true">&#8594;</span></li>
+        <li>Models<span class="arrow" aria-hidden="true">&#8594;</span></li>
+        <li>Rules<span class="arrow" aria-hidden="true">&#8594;</span></li>
+        <li>Scanning<span class="arrow" aria-hidden="true">&#8594;</span></li>
+        <li>Reporting<span class="arrow" aria-hidden="true">&#8594;</span></li>
+        <li>App<span class="arrow" aria-hidden="true">&#8594;</span></li>
+      </ol>
+
+      <div class="rows">
+        <div class="row grid2">
+          <p class="label row__label">COLLECTORS</p>
+          <p class="row__body muted" style="margin:0">Ham veriyi toplar. Karar vermez; "sağlıklı mı" sorusuna cevap üretmez.</p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">MODELS</p>
+          <p class="row__body muted" style="margin:0">Ortak veri yapılarını ve eşik değerlerini taşır. Eşikler tek yerde durur; hem kural hem arayüz aynı sayıyı okur.</p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">RULES</p>
+          <p class="row__body muted" style="margin:0">Ölçümlerden bulgu üretir. Sağlık durumu yalnızca burada belirlenir.</p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">SCANNING</p>
+          <p class="row__body muted" style="margin:0">Modülleri paralel yürütür, hataları modül sınırında yakalar, ilerlemeyi bildirir.</p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">REPORTING</p>
+          <p class="row__body muted" style="margin:0">HTML ve JSON rapor üretir; biçimlendirme tek bir sınıfta toplanır.</p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">APP</p>
+          <p class="row__body muted" style="margin:0">WPF kullanıcı arayüzü. Dört sayfa: Genel Bakış, Modüller, Bakım, Rapor.</p>
+        </div>
+      </div>
+
+      <div class="rows" style="margin-top:2.6rem">
+        <div class="row grid2">
+          <p class="label row__label">YEREL ÇALIŞMA</p>
+          <p class="row__body muted" style="margin:0">
+            Backend yok, API yok, veritabanı yok, hesap yok. Telemetri, analitik
+            ve çökme raporlama da yok. Uygulamanın yaptığı ağ etkinliği sabit
+            hedeflidir ve makineye özgü veri taşımaz: varsayılan ağ geçidine ping
+            ve tek bir adın DNS ile çözümlenmesi. Bunun dışında yalnızca
+            Windows'un kendi güncelleme altyapısı sorgulanır.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">YAPAY ZEKÂ</p>
+          <p class="row__body muted" style="margin:0">
+            Üründe yapay zekâ bileşeni yoktur. Uygulama tamamen deterministiktir:
+            ölçümler ve eşikler sabittir, hiçbir karar bir dil modeline sorulmaz.
+            Kullanıcı verisi hiçbir harici yapay zekâ servisine gönderilmez.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       RAPORLAMA VE GEÇMİŞ
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Raporlama, Geçmiş ve Eğilim</h2>
+      </header>
+
+      <div class="rows">
+        <div class="row grid2">
+          <p class="label row__label">HTML VE<br>JSON RAPOR</p>
+          <p class="row__body muted" style="margin:0">
+            HTML rapor tek parçadır; stiller ve yazdırma betiği gömülüdür, ayrı
+            dosyaya ihtiyaç duymaz. JSON rapor ham değeri ve birimi ayrı alanlar
+            olarak yazar, böylece envanter sistemine aktarılabilir. Rapor
+            dosyasının adında makine adı bulunur; merkezî bir paylaşıma
+            yazıldığında dosyalar çakışmaz.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">YEREL GEÇMİŞ</p>
+          <p class="row__body muted" style="margin:0">
+            Her makinenin tarama geçmişi kendi JSON dosyasında, yerelde tutulur.
+            Yazma atomiktir; dosya bozulursa tarama kaybolmaz. Saklama politikası
+            ham kayıt sayısını sınırlar ve eskiyen kayıtları aylık özete indirir.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">EĞİLİM ANALİZİ</p>
+          <p class="row__body muted" style="margin:0">
+            Eğilim, ilk ve son ölçümün farkından değil, en küçük kareler
+            yöntemiyle hesaplanır — tek bir sapan ölçüm yönü tersine çevirmesin
+            diye. Sürücü başına boş alan projeksiyonu ve batarya sağlığı eğilimi
+            bu hesaba bağlıdır.
+          </p>
+        </div>
+      </div>
+
+      <p class="note" style="margin-top:1.8rem">
+        <strong>Mahremiyet:</strong> Geçmiş deposu üç katmanlı bir süzgeçten
+        geçer; kişisel veri içerebilecek alanlar geçmişe yazılmaz. Buna karşılık
+        <strong>raporlar</strong> makineye özgü veri içerir — makine adı, sürücü
+        harfleri, cihaz ve sürücü adları gibi. Bu bilinçlidir: rapor bir arıza
+        kaydına eklenmek için üretilir. Raporu paylaşmadan önce içeriğinin
+        kurumun paylaşım kurallarına uygun olduğu doğrulanmalıdır.
+      </p>
+    </div>
+  </section>
+
+  <!--
+    ======================================================================
+    EKRAN GÖRÜNTÜLERİ — HENÜZ YAYIMLANMIYOR
+    ======================================================================
+    Depodaki mevcut arayüz görüntüleri (build/onizleme/*.png) gerçek bir
+    makinenin verisiyle üretilmiştir ve bilgisayar adı, yerel IP adresi,
+    disk seri numarası gibi bilgiler içerir. Maskelenmeden siteye
+    eklenemez. Ayrıntılar CONTENT-TODO.md içindedir.
+
+    Görüntüler hazır olduğunda bu yorum kaldırılır ve aşağıdaki iskelet
+    kullanılır:
+
+    <section class="section">
+      <div class="wrap">
+        <header class="section__head">
+          <span class="section__mark" aria-hidden="true"></span>
+          <h2>Ekran Görüntüleri</h2>
+        </header>
+        <figure style="margin:0">
+          <img src="/assets/images/hawk-scan-genel-bakis.webp" width="1180" height="760"
+               alt="Hawk Scan Genel Bakis sayfasi: tarama ozeti ve modul sayilari"
+               loading="lazy" decoding="async">
+          <figcaption class="label">GENEL BAKIŞ — TARAMA SONRASI ÖZET</figcaption>
+        </figure>
+      </div>
+    </section>
+  -->
+
+  <!-- =================================================================
+       TEKNOLOJİ
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Kullanılan Teknolojiler</h2>
+      </header>
+
+      <div class="rows">
+        <div class="row grid2">
+          <p class="label row__label">UYGULAMA</p>
+          <div class="row__body">
+            <p class="items" style="margin:0 0 .8rem">
+              C#<span class="sep">·</span>.NET 10 (net10.0-windows)<span class="sep">·</span>WPF,
+              XAML elle yazılır<span class="sep">·</span>WMI / System.Management<span class="sep">·</span>Windows
+              olay günlüğü<span class="sep">·</span>Windows sistem araçları (powercfg, DISM, sfc, pnputil)
+            </p>
+            <p class="muted" style="margin:0;font-size:.9rem">
+              Harici arayüz kütüphanesi kullanılmaz. Dışarıdan alınan yalnızca
+              iki NuGet paketi vardır; ikisi de sistem verisi okumak içindir.
+            </p>
+          </div>
+        </div>
+
+        <div class="row grid2">
+          <p class="label row__label">GELİŞTİRME<br>VE DAĞITIM</p>
+          <div class="row__body">
+            <p class="items" style="margin:0 0 .8rem">
+              Git<span class="sep">·</span>xUnit<span class="sep">·</span>Inno Setup<span class="sep">·</span>VS
+              Code<span class="sep">·</span>HTML ve JSON raporlama
+            </p>
+            <p class="muted" style="margin:0;font-size:.9rem">
+              Yayın, kendi kendine yeterli klasör yayınıdır. Tek dosya yayın
+              bilinçli olarak kullanılmıyor: kendi kendini açan paket, antivirüs
+              sezgisel taramasının en çok tepki verdiği desendir ve setup.exe ile
+              dağıtımda bir faydası yoktur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       TEST VE KALİTE
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Test ve Doğrulama</h2>
+      </header>
+
+      <div class="rows">
+        <div class="row grid2">
+          <p class="label row__label">OTOMATİK<br>TESTLER</p>
+          <div class="row__body">
+            <p class="muted">
+              Çekirdek kütüphanede 600 otomatik test var. Ağırlık kural
+              katmanında ve ayrıştırıcılarda: hangi ölçümün hangi bulguyu
+              ürettiği, hangi eşiğin hangi tarafa düştüğü tek tek sınanır.
+              Ayrıştırıcılar gerçek makineden alınmış örnek çıktılarla test
+              edilir.
+            </p>
+            <p class="muted" style="margin:0">
+              Geçmiş deposu, eğilim hesabı, komut satırı ayrıştırma ve ölçüm
+              biçimlendirme de kapsanır.
+            </p>
+          </div>
+        </div>
+
+        <div class="row grid2">
+          <p class="label row__label">KAPSAM<br>DIŞINDAKİLER</p>
+          <div class="row__body">
+            <p class="muted">
+              Toplayıcıların kendisi gerçek WMI, süreç ve kayıt defteri erişimi
+              gerektirdiği için birim testlenmez. Bu yüzden saf ayrıştırma
+              mantığı bilinçli olarak ayrı bir katmana çıkarılmıştır — asıl test
+              edilen orasıdır. Bakım işlemleri ve WPF arayüzü de aynı nedenle
+              otomatik test kapsamı dışındadır; doğrulamaları gerçek makinede
+              elle yapılır.
+            </p>
+            <p class="muted" style="margin:0">
+              Kod doğrulaması ile saha doğrulaması ayrı tutulur: testlerin
+              geçmesi eşiğin doğru yerde olduğunu kanıtlamaz, yalnızca kuralın
+              yazıldığı gibi çalıştığını gösterir.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="note" style="margin-top:1.8rem">
+        Her değişiklikten sonra <code>dotnet build</code> ve
+        <code>dotnet test</code> çalıştırılır. Bu sayfa hazırlanırken
+        çalıştırılan son süitte 600 testin 600'ü geçti. Yüzdeye dayalı bir
+        kapsam iddiası ölçülmediği için burada yazılmıyor.
+      </p>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       MEVCUT DURUM
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Projenin Bugünkü Durumu</h2>
+      </header>
+
+      <div class="grid2">
+        <p class="label">TAMAMLANAN</p>
+        <ul class="check">
+          <li>12 tarama modülünün tamamı yazıldı ve çalışıyor.</li>
+          <li>7 bakım işlemi önizleme, onay ve günlük üçlüsüyle hazır.</li>
+          <li>HTML ve JSON raporlama, yerel geçmiş ve eğilim analizi çalışıyor.</li>
+          <li>Komut satırı kipi ve anlamlı çıkış kodları hazır.</li>
+          <li>Proje derleniyor ve otomatik testlerden geçiyor.</li>
+          <li>Inno Setup ile Türkçe kurulum paketi üretiliyor.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       İNDİRME
+       ================================================================= -->
+  <section class="section" id="indir">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Kurulum Paketi</h2>
+          <p class="lead">
+            Kurulum yönetici yetkisi ister. İndirdikten sonra dosyanın SHA-256
+            değerini karşılaştırmanızı öneririm.
+          </p>
+      </header>
+
+      <div class="download">
+        <div class="download__top">
+          <div>
+            <p class="label label--accent" style="margin:0">HAWK SCAN 1.3.0</p>
+            <h3>HawkScanSetup-1.3.0.exe</h3>
+          </div>
+          <a class="btn btn--primary" href="/indir/HawkScanSetup-1.3.0.exe" download>
+            Kurulum dosyasını indir &nbsp;(45,2 MB)
+          </a>
+        </div>
+
+        <dl>
+          <div>
+            <dt class="label">SÜRÜM</dt>
+            <dd>1.3.0</dd>
+          </div>
+          <div>
+            <dt class="label">YAPI TARİHİ</dt>
+            <dd>17.09.2026</dd>
+          </div>
+          <div>
+            <dt class="label">BOYUT</dt>
+            <dd>47.345.331 bayt (45,2 MB)</dd>
+          </div>
+          <div>
+            <dt class="label">SHA-256</dt>
+            <dd class="hash">06417dda7c4198093a09036a2a1bd35e406092926c9507a29c96ac54924c4eb0</dd>
+          </div>
+          <div>
+            <dt class="label">GEREKSİNİM</dt>
+            <dd>64 bit Windows 10 veya Windows 11 · Yönetici yetkisi · Yaklaşık 160 MB disk alanı</dd>
+          </div>
+          <div>
+            <dt class="label">KURULUM</dt>
+            <dd>Program Files altına <code>HawkCenter\HawkScan</code> klasörüne kurulur. Kaldırma, Windows'un "Uygulamalar ve özellikler" ekranından yapılır.</dd>
+          </div>
+        </dl>
+
+        <p class="note" style="margin-top:1.4rem">
+          <strong>SmartScreen uyarısı:</strong> Uygulama kod imzalama
+          sertifikası taşımıyor. Dosyayı çalıştırdığınızda Windows SmartScreen
+          "Bilinmeyen yayımcı" uyarısı gösterebilir. Bu uyarı dosyanın zararlı
+          olduğu anlamına gelmez; yayıncının imzayla doğrulanamadığını belirtir.
+          İndirdiğiniz dosyanın yukarıdaki SHA-256 değeriyle eşleştiğini
+          doğrulayabilirsiniz:
+        </p>
+        <p class="cmd">
+          Get-FileHash .\HawkScanSetup-1.3.0.exe -Algorithm SHA256
+        </p>
+
+        <p class="note note--quiet" style="margin-top:1.4rem">
+          <strong>Bilmeniz gerekenler:</strong> Bellek sağlığı ve işlemci
+          sıcaklığı bilinçli olarak ölçülmez; bu iki başlık her makinede
+          "ölçülemedi" döner. Tarama profili seçimi yalnızca komut satırında
+          bulunur. Uzun süren bakım işlemleri (DISM onarımı, sfc) makineye göre
+          uzun sürebilir ve çalışırken durdurulmamalıdır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       GELİŞTİRİCİ KATKISI
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Bu Projede Ne Yaptım</h2>
+      </header>
+
+      <div class="grid2">
+        <p class="label">ARKA PLAN</p>
+        <div>
+          <div class="about__text">
+            <p>
+              Hawk Scan'i benim için önemli kılan şey, bir alıştırma projesi
+              olmaması. Fikrin kendisi sahadan geldi: bir arıza kaydı açılmadan
+              önce makinenin durumunu hızlı ve güvenilir biçimde görme ihtiyacı,
+              her gün karşılaştığım bir eksiklikti.
+            </p>
+            <p>
+              Ürün kapsamını belirlemek, hangi ölçümün gerçekten karar
+              verdirdiğini ayırmak ve neyin yapılmayacağına karar vermek işin en
+              uzun kısmı oldu.
+            </p>
+          </div>
+
+          <ul class="about__list">
+            <li>BT operasyonlarındaki gerçek ihtiyaçtan yola çıkma ve kapsamı belirleme</li>
+            <li>Windows sistem verilerinin hangi kaynaktan ölçüleceğini seçme</li>
+            <li>Önizleme, onay ve günlük temelli güvenli bakım akışını tasarlama</li>
+            <li>Tek yönlü bağımlılığa dayanan katmanlı mimariyi kurma</li>
+            <li>Test edilebilir kurallar ve ayrıştırıcılar geliştirme</li>
+            <li>Raporlama ve yerel geçmiş altyapısını hazırlama</li>
+            <li>WPF masaüstü arayüzünü ve kurulum paketini oluşturma</li>
+          </ul>
+
+          <p class="note note--quiet" style="margin-top:2rem">
+            Geliştirme sürecinde yapay zekâ destekli geliştirme araçlarından
+            yararlandım; mimari kararlar, ürün kapsamı, doğrulama ve nihai
+            uygulama sorumluluğu bende kaldı. Ürünün kendisinde yapay zekâ
+            bileşeni yoktur.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn--ghost" href="/projects/">Tüm projeler</a>
+            <a class="btn btn--ghost" href="/#iletisim">İletişim</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p class="label" style="margin:0">&copy; <span data-yil>2026</span> BİLAL SERKAN ŞAHİN</p>
+    <nav aria-label="Alt bilgi gezinmesi" class="label">
+      <a href="/">ANA SAYFA</a>
+      <a href="/projects/">PROJELER</a>
+      <a href="https://github.com/bserkansahin" rel="noopener me" target="_blank">GITHUB</a>
+      <a href="https://www.linkedin.com/in/bilal-serkan-%C5%9Fahin-7395b4167/" rel="noopener me" target="_blank">LINKEDIN</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>
