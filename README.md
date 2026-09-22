@@ -29,13 +29,14 @@ bserkansahin.github.io/
 ├── robots.txt
 ├── sitemap.xml
 ├── README.md
-├── CONTENT-TODO.md                  → açık kalan içerik maddeleri
+├── CONTENT-TODO.md                  → açık kalan içerik maddeleri (yayımlanmaz)
 ├── .gitignore
+├── .nojekyll                        → Pages'in Jekyll işlemesini kapatır
 ├── projects/
 │   ├── index.html                   → proje listesi
 │   └── hawk-scan/index.html         → Hawk Scan vaka çalışması
-├── indir/
-│   └── HawkScanSetup-1.3.0.exe      → yayımlanan kurulum paketi (45,2 MB)
+├── indir/                           → yalnızca yerel; .gitignore ile depo dışında
+│   └── HawkScanSetup-1.3.0.exe      → henüz yayımlanmadı (45,2 MB)
 └── assets/
     ├── css/main.css                 → tek stil dosyası
     ├── js/main.js                   → tek betik
@@ -95,7 +96,7 @@ Bağlantılar kök göreli (`/assets/...`) olduğu için dosyayı çift tıklaya
 yeterli değildir; bir yerel sunucu gerekir.
 
 ```powershell
-cd C:\vs_code_projeler\bserkansahin.github.io
+cd <site-klasoru>
 py -3 -m http.server 8080
 ```
 
@@ -183,13 +184,11 @@ Görüntü eklemek için:
 
 ## 8. Kişisel bağlantılar
 
-Hepsi yayında:
-
-| Bağlantı | Değer | Nerede |
+| Bağlantı | Değer | Durum |
 |---|---|---|
-| E-posta | `bserkansahin@gmail.com` | `index.html` → `#iletisim` |
-| LinkedIn | `linkedin.com/in/bilal-serkan-%C5%9Fahin-7395b4167/` | Hero düğmesi, `#iletisim`, alt bilgi (4 sayfada) |
-| GitHub | `github.com/bserkansahin` | Hero düğmesi, `#iletisim`, alt bilgi (4 sayfada) |
+| E-posta | `bserkansahin@gmail.com` | **Yayımlanmıyor.** Onay verilene kadar sitede gösterilmiyor; yalnızca bu README'de kayıtlı. |
+| LinkedIn | `linkedin.com/in/bilal-serkan-%C5%9Fahin-7395b4167/` | Yayında — hero düğmesi, `#iletisim`, alt bilgi (4 sayfada) |
+| GitHub | `github.com/bserkansahin` | Yayında — hero düğmesi, `#iletisim`, alt bilgi (4 sayfada) |
 
 LinkedIn adresindeki `%C5%9F` dizisi "ş" harfinin URL kodlamasıdır; olduğu gibi
 bırakın, "s" ile değiştirmeyin.
@@ -205,8 +204,10 @@ Depo özel kalacak; sitede "Kaynak Kod" düğmesi bulunmuyor.
 
 ## 9. Kurulum paketinin yayımlanması
 
-Kurulum dosyası `indir/HawkScanSetup-1.3.0.exe` yolunda depoya dahildir ve
-Hawk Scan sayfasının "08 / İNDİRME" bölümünden sunulur.
+**Kurulum paketi henüz yayımlanmamıştır.** Dosya yalnızca yerelde
+`indir/HawkScanSetup-1.3.0.exe` yolunda durur ve `.gitignore` ile depo dışında
+tutulur. Hawk Scan sayfasında indirme bölümü ve indirme düğmesi yoktur;
+"Projenin Bugünkü Durumu" bölümünde paketin sonra paylaşılacağı yazılıdır.
 
 ### Sürüm bilgisi
 
@@ -216,7 +217,7 @@ Hawk Scan sayfasının "08 / İNDİRME" bölümünden sunulur.
 | Yapı tarihi | 17.09.2026 |
 | Boyut | 47.345.331 bayt (45,2 MB) |
 | SHA-256 | `06417dda7c4198093a09036a2a1bd35e406092926c9507a29c96ac54924c4eb0` |
-| Kaynak | `C:\vs_code_projeler\Nabiz\dist\HawkScanSetup.exe` |
+| Kaynak | `<hawk-scan-proje-klasoru>\dist\HawkScanSetup.exe` |
 
 ### ⚠ Depo boyutu uyarısı
 
@@ -231,16 +232,16 @@ olarak yüklenir, git geçmişine girmez ve sitedeki düğme o adrese bağlanır
 Releases için herkese açık bir depo gerekir; Hawk Scan kaynak deposu özel
 kalacağından bu amaçla ayrı ve boş bir genel depo kullanılabilir.
 
-**Sürüm yükseltirken yapılacaklar:**
+**Paket yayımlanmaya karar verilirse yapılacaklar:**
 
-1. Yeni `dist\HawkScanSetup.exe` dosyasını `indir/HawkScanSetup-<sürüm>.exe`
-   adıyla kopyalayın.
+1. Paketi GitHub Releases'e sürüm etiketiyle eklenti olarak yükleyin; depoya
+   kopyalamayın ve `.gitignore` içindeki `indir/` kuralını kaldırmayın.
 2. Yeni SHA-256 değerini hesaplayın:
    `Get-FileHash .\indir\HawkScanSetup-<sürüm>.exe -Algorithm SHA256`
-3. `projects/hawk-scan/index.html` → `#indir` bölümündeki sürüm, yapı tarihi,
-   boyut, SHA-256, dosya adı ve indirme bağlantısını güncelleyin.
+3. `projects/hawk-scan/index.html` içine indirme bölümünü geri ekleyin; sürüm,
+   yapı tarihi, boyut, SHA-256 ve bağlantı release adresini göstermelidir.
 4. Aynı sayfadaki "SÜRÜM" künyesini (`.figures` bloğu) güncelleyin.
-5. **Eski sürüm dosyasını depodan silin**; aksi hâlde her sürüm birikir.
+5. "Projenin Bugünkü Durumu" bölümündeki "Kurulum paketi" notunu kaldırın.
 
 ---
 
@@ -254,7 +255,7 @@ kalacağından bu amaçla ayrı ve boş bir genel depo kullanılabilir.
 2. Yerelde:
 
    ```powershell
-   cd C:\vs_code_projeler\bserkansahin.github.io
+   cd <site-klasoru>
    git init
    git add .
    git commit -m "Kişisel portföy sitesinin ilk sürümü"
@@ -311,13 +312,14 @@ kaynağına da, meta etiketine de, yorum satırına da:
 - [ ] Hawk Scan rapor çıktıları ve gerçek sistem verisi
 - [ ] Maskelenmemiş Hawk Scan ekran görüntüleri
 
-Konum bilgisi yalnızca **"İstanbul, Türkiye"** olarak yazılır. Yayımlanan tek
-kişisel iletişim bilgisi e-posta adresi ve genel sosyal profil adresleridir.
+Konum bilgisi yalnızca **"İstanbul, Türkiye"** olarak yazılır. Sitede yayımlanan
+kişisel iletişim bilgisi yoktur; yalnızca genel LinkedIn ve GitHub profil
+adresleri gösterilir.
 
 ### Yayın öncesi tarama komutu
 
 ```powershell
-cd C:\vs_code_projeler\bserkansahin.github.io
+cd <site-klasoru>
 Get-ChildItem -Recurse -Include *.html,*.css,*.js,*.md,*.txt,*.xml |
   Select-String -Pattern '\b0[\s\-\(]?5\d{2}', '@odas', 'password', 'api[_-]?key', 'secret', 'connectionstring', '\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b', 'T\.?C\.?\s*\d{11}'
 ```
@@ -334,8 +336,7 @@ Get-ChildItem -Recurse -Include *.html,*.css,*.js,*.md,*.txt,*.xml |
 2. Tarayıcı geliştirici araçlarında masaüstü, tablet (768 px) ve mobil (375 px)
    genişliklerini kontrol edin; yatay kaydırma olmamalı.
 3. Tüm bağlantıları tıklayın; kırık bağlantı ve eksik görsel olmamalı.
-   İndirme düğmesinin dosyayı gerçekten indirdiğini doğrulayın.
-4. İndirilen dosyanın SHA-256 değerinin sayfadaki değerle eşleştiğini
+4. Sayfalarda indirme bağlantısı veya `/indir/` referansı kalmadığını
    doğrulayın.
 5. Klavyeyle gezinin: `Tab` ile "İçeriğe geç" bağlantısı ilk sırada görünmeli,
    odak halkaları her öğede seçilebilir olmalı, mobil menü `Esc` ile kapanmalı.
