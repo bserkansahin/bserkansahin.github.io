@@ -1190,6 +1190,29 @@ code {
   border: 1.5px solid var(--olive);
 }
 
+/* Ekran görüntüleri */
+.shots {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.shot {
+  margin: 0;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line-2);
+  border-radius: 8px;
+  background: var(--bg-2);
+}
+
+.shot figcaption {
+  margin-top: 0.75rem;
+}
+
 /* Not */
 .note {
   border-left: 3px solid var(--accent);

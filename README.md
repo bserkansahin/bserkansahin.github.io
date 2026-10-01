@@ -34,7 +34,8 @@ bserkansahin.github.io/
 ├── .nojekyll                        → Pages'in Jekyll işlemesini kapatır
 ├── projects/
 │   ├── index.html                   → proje listesi
-│   └── hawk-scan/index.html         → Hawk Scan vaka çalışması
+│   ├── hawk-scan/index.html         → Hawk Scan vaka çalışması
+│   └── hawkai/index.html            → HawkAI (kurum içi yerel yapay zekâ asistanı)
 ├── indir/                           → yalnızca yerel; .gitignore ile depo dışında
 │   └── HawkScanSetup-1.3.0.exe      → GitHub Release ile yayımlanır (45,2 MB)
 └── assets/
@@ -50,12 +51,23 @@ bserkansahin.github.io/
 Site derleme adımı olmadan çalışsın ve JavaScript kapalıyken de eksiksiz
 görünsün diye üst şerit (`<header class="site-header">`) ve alt bilgi
 (`<footer class="site-footer">`) her HTML dosyasında birebir tekrar eder.
-Menüye madde eklerken **dört dosyanın dördünü de** güncelleyin:
+Menüye madde eklerken **beş dosyanın beşini de** güncelleyin:
 
 - `index.html`
 - `projects/index.html`
 - `projects/hawk-scan/index.html`
+- `projects/hawkai/index.html`
 - `404.html`
+
+### HawkAI sayfası — gizlilik kuralı
+
+HawkAI kurum içinde çalışan bir sistemdir. Active Directory ve SMS
+entegrasyonları sayfada **genel olarak** anlatılır; kurum adı, sunucu/IP/alan
+adı, iç belge içerikleri, etki alanı/OU/grup/servis hesabı adları, SMS
+sağlayıcısı ve gerçek hesap/kişi bilgileri yazılmaz. Ekran görüntülerinde adres çubuğu ve IP
+görünmemeli; sohbet ekranındaki sol menüde sohbet başlıkları maskelenir
+(`hawkai-sohbet.jpg` bu şekilde hazırlandı). Logo, Hawk Center amblemidir
+(`hawk-scan-logo.jpg` ile aynı).
 
 ---
 

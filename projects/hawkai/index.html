@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>HawkAI | Kurum İçi Yerel Yapay Zekâ Asistanı</title>
+<meta name="description" content="Kurum içindeki sunucuda kapalı devre çalışan yerel yapay zekâ asistanı. Belgelere dayalı cevap verir; Active Directory ve SMS entegrasyonlarıyla BT işlerini sohbetten yürütür.">
+<link rel="canonical" href="https://bserkansahin.github.io/projects/hawkai/">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Bilal Serkan Şahin">
+<meta property="og:url" content="https://bserkansahin.github.io/projects/hawkai/">
+<meta property="og:title" content="HawkAI | Kurum İçi Yerel Yapay Zekâ Asistanı">
+<meta property="og:description" content="Kurum içindeki sunucuda kapalı devre çalışan, yalnızca kendisine verilen belgelere dayanarak cevap veren yerel yapay zekâ asistanı.">
+<meta property="og:image" content="https://bserkansahin.github.io/assets/images/hawkai-giris.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="795">
+<meta property="og:image:alt" content="HawkAI giriş ekranı">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HawkAI | Kurum İçi Yerel Yapay Zekâ Asistanı">
+<meta name="twitter:description" content="Kurum içindeki sunucuda kapalı devre çalışan, yalnızca kendisine verilen belgelere dayanarak cevap veren yerel yapay zekâ asistanı.">
+<meta name="twitter:image" content="https://bserkansahin.github.io/assets/images/hawkai-giris.jpg">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#F6F1E8">
+
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+<a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/"><span class="brand__rule" aria-hidden="true"></span>Bilal Serkan Şahin</a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="ana-gezinme">
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      MENÜ
+    </button>
+
+    <nav class="nav" id="ana-gezinme" aria-label="Ana gezinme">
+      <a href="/">Ana Sayfa</a>
+      <a href="/#hakkimda">Hakkımda</a>
+      <a href="/#deneyim">Deneyim</a>
+      <a href="/#yetkinlikler">Yetkinlikler</a>
+      <a href="/projects/" aria-current="page">Projeler</a>
+      <a href="/#iletisim">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="breadcrumb wrap label" aria-label="Site yolu">
+  <ol>
+    <li><a href="/">ANA SAYFA</a></li>
+    <li><a href="/projects/">PROJELER</a></li>
+    <li>HAWKAI</li>
+  </ol>
+</nav>
+
+<main id="icerik">
+
+  <!-- =================================================================
+       PROJE BAŞLIĞI
+       Gizlilik: Bu sayfaya kurum adı, sunucu/IP/alan adı bilgisi, iç belge
+       içerikleri, etki alanı/OU/grup/servis hesabı adları ve gerçek
+       hesap/kişi bilgileri yazılmaz. Entegrasyonlar genel olarak anlatılır.
+       Bkz. README.md.
+       ================================================================= -->
+  <section class="project-hero">
+    <div class="wrap">
+      <div class="project-hero__head">
+        <div class="project-hero__ident">
+          <div class="project-hero__logo">
+            <img src="/assets/images/hawk-scan-logo.jpg" width="84" height="84"
+                 alt="Hawk Center amblemi: kalkan biçimli, şahin başı ve devre hatları taşıyan logo"
+                 decoding="async">
+          </div>
+          <div>
+            <p class="label label--accent">HAWK CENTER ÜRÜN AİLESİ</p>
+            <h1>HawkAI</h1>
+            <p class="label">KURUM İÇİ YEREL YAPAY ZEKÂ ASİSTANI</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="lead">
+        HawkAI, çalıştığım kurumun bilgi teknolojileri ekibi için kurduğum,
+        tamamen kurum içindeki bir sunucuda çalışan yapay zekâ asistanıdır.
+        <strong>Kapalı devre çalışır:</strong> dil modeli, belgeler ve sohbet
+        geçmişi kurumun kendi sunucusunda kalır; hiçbir soru veya belge harici
+        bir yapay zekâ servisine gönderilmez. HawkAI'ye hangi belgeleri
+        verirseniz onları bilir ve kullanıcılara yalnızca o belgelere dayanarak
+        cevap verir. Bunun yanında Active Directory ve SMS gibi kurum
+        sistemlerine bağlanan araçlarıyla, BT ekibinin rutin işlerini sohbet
+        penceresinden yürütür.
+      </p>
+
+      <p class="note" style="margin-top:1.8rem">
+        <strong>Not:</strong> HawkAI her konuyu bilen genel amaçlı bir
+        sohbet robotu değildir ve internette arama yapmaz. Belgelerde olmayan
+        bir şey sorulduğunda tahmin yürütmek yerine bu bilginin belgelerde
+        bulunmadığını söyler. Model yeniden eğitilmez; belgeler bir bilgi
+        tabanına eklenir ve her soruda oradan okunur.
+      </p>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       ENTEGRASYONLAR
+       Genel anlatım: etki alanı, OU, grup, sunucu ve servis hesabı adları,
+       SMS sağlayıcısı ve gerçek hesap/kişi bilgileri yazılmaz.
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Sohbetten İşleme: Entegrasyonlar</h2>
+        <p class="lead">
+          HawkAI yalnızca soru cevaplamaz. BT ekibinin her gün elle yaptığı
+          işler, kurum sistemlerine bağlanan araçlar sayesinde tek bir cümleyle
+          sohbet penceresinden yürütülür.
+        </p>
+      </header>
+
+      <ol class="modules">
+        <li>
+          <span class="label">01</span>
+          <div>
+            <h3>Active Directory hesap açma</h3>
+            <p>
+              "Ayşe Yılmaz için muhasebede hesap aç" demek yeterli. Kullanıcı
+              adı Türkçe karakterlerden arındırılarak kodla üretilir, güçlü bir
+              ilk parola oluşturulur ve kullanıcı ilk girişte parolasını
+              değiştirmek zorunda kalır. Unvan, departman ve şirket bilgileri
+              yazılır, yönetici adıyla aranıp bağlanır. Aynı kullanıcı adı
+              varsa hesap açılmaz; verilmeyen bilgi uydurulmaz, boş bırakılıp
+              uyarı verilir.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="label">02</span>
+          <div>
+            <h3>Süreli hesap kontrolü</h3>
+            <p>
+              Uzaktan erişim yetkisi olan süreli hesaplar tek komutla taranır.
+              Süresi dolan hesap uzatılır, yakın zamanda dolup pasif kalan hesap
+              yeniden açılır, süresi yaklaşanlar için uyarı verilir. İşlem
+              yapılan her kullanıcıya yeni bitiş tarihiyle e-posta gider.
+              İstenirse hiçbir değişiklik yapmadan yalnızca rapor üretilir.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="label">03</span>
+          <div>
+            <h3>Grup bazlı SMS bildirimi</h3>
+            <p>
+              İsim ve numara listesi sohbete yapıştırılıp bir gruba kaydedilir;
+              numaralar hangi biçimde yazılırsa yazılsın düzeltilir. Ardından
+              "BT ekibine şu mesajı at" demek yeterli: mesaj gruptaki herkese
+              kurumun SMS sağlayıcısı üzerinden tek seferde gönderilir.
+              Gruplar ve numaralar kurum sunucusunda tutulur.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="label">04</span>
+          <div>
+            <h3>Belge senkronu</h3>
+            <p>
+              Paylaşılan klasöre bırakılan Word ve PDF dosyaları birkaç dakika
+              içinde bilgi tabanına girer; güncellenen dosyanın yeni sürümü
+              yüklenir, silinen dosya kaldırılır. Taranmış belgeler OCR ile
+              metne çevrilir.
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="rows" style="margin-top:2.6rem">
+        <div class="row grid2">
+          <p class="label row__label">KARARI KOD<br>VERİR</p>
+          <p class="row__body muted" style="margin:0">
+            Model yalnızca isteği anlar ve bilgileri araca aktarır. Kullanıcı
+            adı, parola, tarih hesabı, çakışma kontrolü ve uzatma kuralları
+            koddadır; model bir kuralı esnetemez.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">EN AZ YETKİ</p>
+          <p class="row__body muted" style="margin:0">
+            Active Directory'ye ayrı bir servis hesabıyla, sertifika doğrulamalı
+            şifreli bağlantı üzerinden bağlanılır. Servis hesabı tam yetkili
+            değildir; yalnızca belirlenen bölümde, yalnızca araçların ihtiyaç
+            duyduğu işlemleri yapabilir.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">YETKİLİ<br>KULLANICI</p>
+          <p class="row__body muted" style="margin:0">
+            Araçları yalnızca yöneticiler ve BT ekibi çağırabilir. Yetki hem
+            arayüzde hem de aracın kendi içinde ayrıca kontrol edilir.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">DENETİM<br>KAYDI</p>
+          <p class="row__body muted" style="margin:0">
+            Her işlem kimin istediği, ne yapıldığı ve sonucuyla birlikte
+            denetim kaydına yazılır. Parola gibi gizli bilgiler kayda girmez.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       KAPALI DEVRE
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Kapalı Devre Çalışma</h2>
+        <p class="lead">
+          Kurum belgeleriyle çalışan bir asistanda ilk soru "verimiz nereye
+          gidiyor?" olur. HawkAI'de cevap tek bir sunucudur.
+        </p>
+      </header>
+
+      <div class="rows">
+        <div class="row grid2">
+          <p class="label row__label">MODEL</p>
+          <p class="row__body muted" style="margin:0">
+            Dil modeli kurum içindeki sunucunun ekran kartında çalışır. Bulut
+            tabanlı bir yapay zekâ API'si kullanılmaz; soru da cevap da
+            sunucudan çıkmaz.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">ERİŞİM</p>
+          <p class="row__body muted" style="margin:0">
+            Arayüze yalnızca kurum ağından, şifreli bağlantıyla ulaşılır.
+            İnternetten sunucuya gelen bağlantılar güvenlik duvarında kapalıdır.
+            Hesapları yönetici açar; dışarıdan kayıt olunamaz.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">VERİ</p>
+          <p class="row__body muted" style="margin:0">
+            Belgeler, bilgi tabanı ve sohbet geçmişi sunucunun kendi diskinde
+            durur. Her ekip yalnızca kendisine açılan bilgi tabanını görür.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">DIŞARIYA<br>GİDEN TRAFİK</p>
+          <p class="row__body muted" style="margin:0">
+            Sunucu internete yalnızca sistem güncellemesi ve model indirmek için
+            çıkar. Tek istisna, yetkili bir kullanıcının açıkça istediği
+            entegrasyon işlemleridir (örneğin SMS veya e-posta bildirimi); bu durumda ilgili
+            servise yalnızca o işlemin verisi gider.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       BELGEDEN CEVABA
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Belgeden Cevaba</h2>
+        <p class="lead">
+          HawkAI'nin "öğrenmesi" modeli yeniden eğitmek değil, belgeyi
+          aranabilir bir bilgi tabanına eklemektir (RAG). Yeni bir belge
+          eklemek dakikalar sürer ve modele dokunmaz.
+        </p>
+      </header>
+
+      <ol class="pipeline" aria-label="Akış: Belge, Ön işleme, Bilgi tabanı, Arama ve sıralama, Model, Kaynaklı cevap">
+        <li>Belge<span class="arrow" aria-hidden="true">&#8594;</span></li>
+        <li>Ön işleme<span class="arrow" aria-hidden="true">&#8594;</span></li>
+        <li>Bilgi tabanı<span class="arrow" aria-hidden="true">&#8594;</span></li>
+        <li>Arama ve sıralama<span class="arrow" aria-hidden="true">&#8594;</span></li>
+        <li>Model<span class="arrow" aria-hidden="true">&#8594;</span></li>
+        <li>Kaynaklı cevap<span class="arrow" aria-hidden="true">&#8594;</span></li>
+      </ol>
+
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>Belge eklenir</h3>
+            <p>
+              Word veya PDF dosyası paylaşılan klasöre bırakılır; birkaç dakika
+              içinde bilgi tabanına girer. Dosya güncellenirse yeni sürüm
+              yüklenir, silinirse bilgi tabanından da kaldırılır.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Ön işleme</h3>
+            <p>
+              Word tabloları satır satır anlamlı cümlelere, başlıklar bölüm
+              başlıklarına çevrilir. Metin katmanı olmayan taranmış PDF'ler
+              Türkçe karakter tanıma (OCR) ile metne dönüştürülür.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Arama ve yeniden sıralama</h3>
+            <p>
+              Soru geldiğinde anlam ve anahtar kelime aramasıyla en ilgili
+              parçalar bulunur, ardından ayrı bir sıralama modeli bunları
+              soruya uygunluğuna göre yeniden dizer.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Kaynaklı cevap</h3>
+            <p>
+              Model yalnızca bu parçalardan cevap üretir ve dayandığı belgeyi
+              gösterir. Parçalarda cevap yoksa bunu açıkça söyler.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       NELER YAPIYOR
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Neler Yapıyor</h2>
+      </header>
+
+      <div class="rows">
+        <div class="row grid2">
+          <p class="label row__label">BELGEYE DAYALI<br>SORU-CEVAP</p>
+          <p class="row__body muted" style="margin:0">
+            Prosedür, kılavuz ve politika belgeleri hakkında doğal dilde
+            sorulan sorulara Türkçe cevap verir. Kullanıcı belgeyi açıp aramak
+            yerine soruyu sorar.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">UYDURMAMA</p>
+          <p class="row__body muted" style="margin:0">
+            Sistem talimatı modele belgeye dayanmasını, kaynak göstermesini,
+            sorulmayan yorum eklememesini ve bilmediğini uydurmamasını söyler.
+            Bu davranış, belgede bulunmayan sorularla bilerek test edildi.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">YETKİ VE<br>GRUPLAR</p>
+          <p class="row__body muted" style="margin:0">
+            Kullanıcılar gruplara ayrılır; her grup yalnızca kendisine açılan
+            bilgi tabanlarını ve araçları görür.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid2" style="margin-top:2.6rem">
+        <p class="label">YAPABİLECEKLERİ</p>
+        <ul class="check">
+          <li>Her departmana kendi belgeleriyle çalışan ayrı bir asistan açılabilir.</li>
+          <li>Yeni bir belge alanı eklemek, yeni bir klasör tanımlamak kadar kolaydır.</li>
+          <li>Kurum içi sistemlere yeni araç entegrasyonları eklenebilir.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       EKRAN GÖRÜNTÜLERİ
+       Sohbet ekranındaki sol menüde yer alan sohbet başlıkları kuruma özel
+       iş akışlarını gösterdiği için maskelendi. Görüntülerde adres çubuğu
+       ve IP adresi yoktur.
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Ekran Görüntüleri</h2>
+      </header>
+
+      <div class="shots">
+        <figure class="shot">
+          <img src="/assets/images/hawkai-giris.jpg" width="1600" height="795"
+               alt="HawkAI giriş ekranı: gün doğumu renklerinde arka plan, parçacıklardan oluşan şahin figürü ve ortada e-posta ile parola alanlı giriş kartı"
+               loading="lazy" decoding="async">
+          <figcaption class="label">GİRİŞ EKRANI — KURUMA ÖZEL MARKA VE ANİMASYONLU TEMA</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="/assets/images/hawkai-sohbet.jpg" width="1600" height="797"
+               alt="HawkAI sohbet ekranı: solda menü, ortada HawkAI logosu, 'Yerel yapay zeka modeli. Kurum belgelerine dayalı cevap verir.' açıklaması ve soru kutusu"
+               loading="lazy" decoding="async">
+          <figcaption class="label">SOHBET EKRANI — KURUM BELGELERİNE DAYALI YEREL MODEL</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       TEKNOLOJİ
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Kullanılan Teknolojiler</h2>
+      </header>
+
+      <div class="rows">
+        <div class="row grid2">
+          <p class="label row__label">YAPAY ZEKÂ</p>
+          <div class="row__body">
+            <p class="items" style="margin:0 0 .8rem">
+              Ollama (llama.cpp)<span class="sep">·</span>Qwen 3.5 4B, 4 bit
+              nicemlenmiş<span class="sep">·</span>bge-m3 çok dilli
+              gömme modeli<span class="sep">·</span>bge-reranker-v2-m3 yeniden sıralama
+            </p>
+            <p class="muted" style="margin:0;font-size:.9rem">
+              Gömme ve sıralama modelleri işlemcide çalışır; ekran kartının
+              8 GB belleğinin tamamı dil modeline kalır.
+            </p>
+          </div>
+        </div>
+
+        <div class="row grid2">
+          <p class="label row__label">ARAYÜZ VE<br>UYGULAMA</p>
+          <p class="row__body items" style="margin:0">
+            Open WebUI<span class="sep">·</span>Python<span class="sep">·</span>Docker
+            Compose<span class="sep">·</span>OCRmyPDF ve Tesseract
+          </p>
+        </div>
+
+        <div class="row grid2">
+          <p class="label row__label">ALTYAPI</p>
+          <p class="row__body items" style="margin:0">
+            Ubuntu Server<span class="sep">·</span>NVIDIA GTX 1080 (8 GB)<span class="sep">·</span>Caddy
+            (TLS)<span class="sep">·</span>UFW güvenlik duvarı<span class="sep">·</span>systemd zamanlayıcıları
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       KARARLAR
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Öne Çıkan Kararlar</h2>
+      </header>
+
+      <div class="rows">
+        <div class="row grid2">
+          <p class="label row__label">ELDEKİ<br>DONANIM</p>
+          <p class="row__body muted" style="margin:0">
+            Sunucudaki ekran kartı eski nesil bir karttır; yaygın yüksek
+            performanslı çıkarım motorları bu kartı desteklemez. Bu yüzden
+            nicemlenmiş modelleri verimli çalıştıran Ollama seçildi ve model
+            boyutu 8 GB belleğe göre belirlendi. Yeni donanım almadan
+            çalışan bir pilot kurmak hedefti.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">TABLOLAR</p>
+          <p class="row__body muted" style="margin:0">
+            İlk testlerde yanlış cevapların kaynağı model değil belge
+            biçimiydi: tablolar hücre hücre alt alta diziliyor, hangi satırın
+            hangi tabloya ait olduğu kayboluyordu. Tablolar, tablo adını
+            taşıyan tam cümlelere çevrilince aynı sorular doğru cevaplandı.
+          </p>
+        </div>
+        <div class="row grid2">
+          <p class="label row__label">KÜÇÜK MODEL,<br>NET SINIR</p>
+          <p class="row__body muted" style="margin:0">
+            Küçük bir model daha hızlıdır ama karmaşık akıl yürütmede hata
+            yapabilir. Bu yüzden araçlarda hesaplama, doğrulama ve yetki
+            kontrolü kodda yapılır; model yalnızca isteği anlar ve sonucu
+            özetler.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       MEVCUT DURUM
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Projenin Bugünkü Durumu</h2>
+      </header>
+
+      <div class="grid2">
+        <p class="label">TAMAMLANAN</p>
+        <ul class="check">
+          <li>Sunucu, yerel model ve şifreli web arayüzü kuruldu.</li>
+          <li>BT prosedürleri bilgi tabanıyla pilot kullanım başladı.</li>
+          <li>Otomatik belge senkronu ve taranmış belge için OCR hattı çalışıyor.</li>
+          <li>Yeniden sıralama modeliyle arama kalitesi artırıldı.</li>
+          <li>Active Directory hesap açma ve süreli hesap kontrolü araçları devrede.</li>
+          <li>Grup bazlı SMS bildirimi devrede.</li>
+          <li>Kuruma özel marka ve giriş ekranı teması hazır.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       GELİŞTİRİCİ KATKISI
+       ================================================================= -->
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head">
+        <span class="section__mark" aria-hidden="true"></span>
+        <h2>Bu Projede Ne Yaptım</h2>
+      </header>
+
+      <div class="grid2">
+        <p class="label">KATKILARIM</p>
+        <div>
+          <ul class="about__list" style="margin-top:0">
+            <li>Donanım kısıtlarına göre model, çıkarım motoru ve mimari seçimi</li>
+            <li>Ağ politikası, güvenlik duvarı ve şifreli erişimle kapalı devre kurulum</li>
+            <li>Word ve PDF belgeleri için dönüştürme, OCR ve otomatik senkron hattı</li>
+            <li>Arama, yeniden sıralama ve sistem talimatının test edilerek ayarlanması</li>
+            <li>Active Directory ve SMS entegrasyonlarının tasarımı ve kodlanması</li>
+            <li>HawkAI markası ve giriş ekranı teması</li>
+          </ul>
+
+          <div class="btn-row">
+            <a class="btn btn--ghost" href="/projects/">Tüm projeler</a>
+            <a class="btn btn--ghost" href="/#iletisim">İletişim</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p class="label" style="margin:0">&copy; <span data-yil>2026</span> BİLAL SERKAN ŞAHİN</p>
+    <nav aria-label="Alt bilgi gezinmesi" class="label">
+      <a href="/">ANA SAYFA</a>
+      <a href="/projects/">PROJELER</a>
+      <a href="https://github.com/bserkansahin" rel="noopener me" target="_blank">GITHUB</a>
+      <a href="https://www.linkedin.com/in/bilal-serkan-%C5%9Fahin-7395b4167/" rel="noopener me" target="_blank">LINKEDIN</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>
